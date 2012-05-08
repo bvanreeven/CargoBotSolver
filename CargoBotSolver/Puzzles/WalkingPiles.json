@@ -1,0 +1,6 @@
+{
+  grapplerPosition: 0,
+  setup: ["bbbb", "bbbb", "bbbb", "", "", "", ""],
+  goal: ["", "", "", "", "bbbb", "bbbb", "bbbb"],
+  toolbox: "auto"
+}

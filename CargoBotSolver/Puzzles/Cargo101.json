@@ -1,0 +1,6 @@
+{
+  grapplerPosition: 0,
+  setup: ["y", ""],
+  goal: ["", "y"],
+  toolbox: "dlr1234"
+}
