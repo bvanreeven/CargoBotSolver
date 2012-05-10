@@ -25,12 +25,11 @@ namespace CargoBotSolver
                     break;
                 }
                 
-                Console.WriteLine(string.Format("Trying solution {0}...", counter++));
+                Console.Write(string.Format("Trying solution {0}... ", counter++));
                 
                 var simulator = new Simulator(puzzle, solution);
                 var result = simulator.Run();
                 Console.WriteLine(result);
-                Console.WriteLine();
                 
                 if (result == SimulationResult.Solved)
                 {
