@@ -19,5 +19,10 @@ namespace CargoBotSolver
         {
             return index >= instructions.Count ? null : instructions[index];
         }
+        
+        public override string ToString ()
+        {
+            return string.Join(", ", instructions);
+        }
     }
 }

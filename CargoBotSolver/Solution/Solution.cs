@@ -37,5 +37,10 @@ namespace CargoBotSolver
         {
             get { return functions[3]; }
         }
+        
+        public override string ToString()
+        {
+            return string.Format("  F1 = {0}\n  F2 = {1}\n  F3 = {2}\n  F4 = {3}", F1, F2, F3, F4);
+        }
     }
 }

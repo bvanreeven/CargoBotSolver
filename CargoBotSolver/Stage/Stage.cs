@@ -125,7 +125,8 @@ namespace CargoBotSolver
         {
             if (obj == null || obj.GetType() != typeof(Stage))
                 return false;
-            
+            if (obj == this)
+                return true;
             var that = (Stage)obj;
             return this.grapplerPosition == that.grapplerPosition
                 && this.boxInGrappler == that.boxInGrappler
@@ -146,7 +147,9 @@ namespace CargoBotSolver
         
         public override int GetHashCode()
         {
-            var hashCode = grapplerPosition ^ (int)boxInGrappler ^ stacks.Count;
+            var hashCode = grapplerPosition ^ stacks.Count;
+            if (boxInGrappler.HasValue)
+                hashCode ^= (int)boxInGrappler;
             foreach (var box in stacks.SelectMany(stack => stack))
                 hashCode ^= (int)box;
             return hashCode;
