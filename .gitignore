@@ -2,4 +2,5 @@
 *.user*
 *.suo
 *.pidb
+test-results
 
